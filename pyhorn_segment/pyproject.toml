@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyhorn_segment"
+version = "0.1.0"
+description = "Medial-axis / auto-segment computation for pyhorn"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy",
+    "shapely",
+    "networkx",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --tb=short"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
