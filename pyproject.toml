@@ -10,7 +10,7 @@ license = { text = "MIT" }
 authors = [{ name = "Guillaume de Boyer-Montegut" }]
 requires-python = ">=3.10"
 dependencies = [
-    "pyhorn>=0.1.0",
+    "pyhorn @ git+https://github.com/minipons/pyhorn.git@main",
     "numpy>=1.24.0",
     "scipy>=1.10.0",
     "scikit-learn>=1.3.0",
